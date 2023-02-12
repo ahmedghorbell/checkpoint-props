@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+body{
+    background-image: url('https://videohive.img.customer.envatousercontent.com/files/785fc5e8-2cc8-4365-9b82-3fa24f18b672/inline_image_preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=44cce0d49a7b78138edab000a866c261') ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.child {
+    margin-top: 20px;
+    height: 400px;
+    width: 40%;
+    clip-path: circle(50.0% at 50% 50%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #888888;
+    transition: all 0.3s ease-in-out;
+    position: relative; /* Add position property */
+    }
+    
+    .child:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-color: lightblue; /* Add a different background color /
+    border-radius: 50% 50% 0% 0%; / Change the border radius /
+    transform: rotate(45deg); / Rotate the pseudo-element /
+    z-index: -1; / Place the pseudo-element behind the image */
+    }
+    
+    .child:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    }
